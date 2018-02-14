@@ -25,7 +25,7 @@
                 <link rel='stylesheet' id='pretty-photo-css-css'  href='js/prettyphoto/prettyPhoto.css?ver=3.1.4' type='text/css' media='all' />
                 <link rel='stylesheet' id='main-css-css'  href='css/main.css?ver=1.0' type='text/css' media='all' />
                 <link rel='stylesheet' id='custom-css-css'  href='css/custom.css?ver=1.0' type='text/css' media='all' />
-
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 
                 <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
                 <!--[if lt IE 9]>
@@ -57,26 +57,10 @@
                                                 <div class="menu-top-menu-container">
                                                         <ul id="menu-top-menu" class="clearfix">
                                                                 <li><a href="index.html">Home</a></li>
-                                                                <li><a href="home-categories-description.html">Home 2</a></li>
-                                                                <li><a href="home-categories-articles.html">Home 3</a></li>
-                                                                <li  class="current-menu-item"><a href="articles-list.html">Articles List</a></li>
+                                                                <li class="current-menu-item"><a href="articles-list.html">Measurements List</a></li>
                                                                 <li><a href="faq.html">FAQs</a></li>
-                                                                <li><a href="#">Skins</a>
-                                                                        <ul class="sub-menu">
-                                                                                <li><a href="blue-skin.html">Blue Skin</a></li>
-                                                                                <li><a href="green-skin.html">Green Skin</a></li>
-                                                                                <li><a href="red-skin.html">Red Skin</a></li>
-                                                                                <li><a href="index.html">Default Skin</a></li>
-                                                                        </ul>
-                                                                </li>
-                                                                <li><a href="#">More</a>
-                                                                        <ul class="sub-menu">
-                                                                                <li><a href="full-width.html">Full Width</a></li>
-                                                                                <li><a href="elements.html">Elements</a></li>
-                                                                                <li><a href="page.html">Sample Page</a></li>
-                                                                        </ul>
-                                                                </li>
-                                                                <li><a href="contact.html">Contact</a></li>
+                                                                <li><a href="about.html">About us</a></li>
+                                                                <li><a href="contact.html">Contact us</a></li>
                                                         </ul>
                                                 </div>
                                         </nav>
@@ -109,131 +93,60 @@
 
                                         <!-- start of page content -->
                                         <div class="span8 main-listing">
+											<article class=" type-post format-standard hentry clearfix">
 
-                                                <article class="format-standard type-post hentry clearfix">
+												<h1><a href="#">Number of measurements in each area</a></h1>
+												<canvas id="myChart" style="height:40vh; width:60vw"></canvas>
+												<script>
+												var ctx = document.getElementById('myChart').getContext('2d');
+												var chart = new Chart(ctx, {
+													// The type of chart we want to create
+													type: 'horizontalBar',
+													// The data for our dataset
+													data: {
+														labels: ["Area1", "Area2", "Area3", "Area4", "Area5", "Area6", "Area7"],
+														datasets: [{
+															label: 'Lorem Lorem Lorem',
+															backgroundColor: ['#9BECD0','#9BE0EC','#9BB0EC','#EC9BCD', '#EC9B9B' , '#ECCA9B', '#E0EC9B'],
+															borderColor: 'rgb(255, 99, 132)',
+															data: ['10', '20', '30', '12', '17', '34', '4'],
+														}]
+													},
 
-                                                        <header class="clearfix">
+												// Configuration options go here
+												options: {}
+												});
+												</script>
+												<BR><BR><BR><BR>
+												<h1><a href="#">Number of articleS in each measurement</a></h1>												
+												<canvas id="myChart2" style="height:100vh; width:80vw"></canvas>
+												<script>
+												var ctx = document.getElementById('myChart2').getContext('2d');
+												var chart = new Chart(ctx, {
+												// The type of chart we want to create
+												type: 'doughnut',
 
-                                                                <h3 class="post-title">
-                                                                        <a href="single.html">Integrating WordPress with Your Website</a>
-                                                                </h3>
+												// The data for our dataset
+													data: {
+														datasets: [{
+														data: [35, 25, 11, 13, 10, 5, 2],
+														backgroundColor: ['#9BECD0','#9BE0EC','#9BB0EC','#EC9BCD', '#EC9B9B' , '#ECCA9B', '#E0EC9B'],
+														}],
 
-                                                                <div class="post-meta clearfix">
-                                                                        <span class="date">25 Feb, 2013</span>
-                                                                        <span class="category"><a href="#" title="View all posts in Server &amp; Database">Server &amp; Database</a></span>
-                                                                        <span class="comments"><a href="#" title="Comment on Integrating WordPress with Your Website">3 Comments</a></span>
-                                                                        <span class="like-count">66</span>
-                                                                </div><!-- end of post meta -->
+														// These labels appear in the legend and in the tooltips when hovering different arcs
+														labels: ["Measurement 1", "Measurement 2", "Measurement 3", "Measurement 4", "Measurement 5", "Measurement 6", "Measurement 7"]
+													},
 
-                                                        </header>
-
-                                                        <p>Many of us work in an endless stream of tasks, browser tasks, social media, emails, meetings, rushing from one thing to another, never pausing and never ending.&nbsp;Then the day is over, and we are exhausted, and we often have very little to show for it. And we start the next . . . <a class="readmore-link" href="http://knowledgebase.inspirythemes.com/integrating-wordpress-with-your-website/">Read more</a></p>
-
-                                                </article>
-
-                                                <article class="format-standard type-post hentry clearfix">
-
-                                                        <header class="clearfix">
-
-                                                                <h3 class="post-title">
-                                                                        <a href="single.html">Using Javascript</a>
-                                                                </h3>
-
-                                                                <div class="post-meta clearfix">
-                                                                        <span class="date">25 Feb, 2013</span>
-                                                                        <span class="category"><a href="#" title="View all posts in Advanced Techniques">Advanced Techniques</a></span>
-                                                                        <span class="comments"><a href="#" title="Comment on Using Javascript">0 Comments</a></span>
-                                                                        <span class="like-count">18</span>
-                                                                </div><!-- end of post meta -->
-
-                                                        </header>
-
-                                                        <p>Many of us work in an endless stream of tasks, browser tasks, social media, emails, meetings, rushing from one thing to another, never pausing and never ending.&nbsp;Then the day is over, and we are exhausted, and we often have very little to show for it. And we start the next . . . <a class="readmore-link" href="http://knowledgebase.inspirythemes.com/using-javascript/">Read more</a></p>
-
-                                                </article>
-
-                                                <article class=" type-post format-image hentry clearfix">
-
-                                                        <header class="clearfix">
-
-                                                                <h3 class="post-title">
-                                                                        <a href="single.html">Using Images</a>
-                                                                </h3>
-
-                                                                <div class="post-meta clearfix">
-                                                                        <span class="date">25 Feb, 2013</span>
-                                                                        <span class="category"><a href="#" title="View all posts in Designing in WordPress">Designing in WordPress</a></span>
-                                                                        <span class="comments"><a href="#" title="Comment on Using Images">0 Comments</a></span>
-                                                                        <span class="like-count">7</span>
-                                                                </div><!-- end of post meta -->
-
-                                                        </header>
-
-                                                        <a href="#" title="Using Images"><img width="770" height="501" src="images/temp/living-room-770x501.jpg" class="attachment-std-thumbnail wp-post-image" alt="Living room"></a>
-
-                                                        <p>Many of us work in an endless stream of tasks, browser tasks, social media, emails, meetings, rushing from one thing to another, never pausing and never ending.&nbsp;Then the day is over, and we are exhausted, and we often have very little to show for it. And we start the next . . . <a class="readmore-link" href="http://knowledgebase.inspirythemes.com/using-images/">Read more</a></p>
-
-                                                </article>
-
-                                                <article class="type-post  format-video hentry clearfix">
-
-                                                        <header class="clearfix">
-
-                                                                <h3 class="post-title">
-                                                                        <a href="single.html">Using Video</a>
-                                                                </h3>
-
-                                                                <div class="post-meta clearfix">
-                                                                        <span class="date">24 Feb, 2013</span>
-                                                                        <span class="category"><a href="#" title="View all posts in WordPress Plugins">WordPress Plugins</a></span>
-
-                                                                        <span class="comments"><a href="#" title="Comment on Using Video">0 Comments</a></span>
-
-                                                                        <span class="like-count">7</span>
-                                                                </div><!-- end of post meta -->
-
-                                                        </header>
-                                                        <div class="post-video">
-                                                                <div class="video-wrapper">
-                                                                        <iframe src="http://player.vimeo.com/video/24535181" width="500" height="281" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
-                                                                </div>
-                                                        </div>
-
-                                                        <p>Many of us work in an endless stream of tasks, browser tasks, social media, emails, meetings, rushing from one thing to another, never pausing and never ending.&nbsp;Then the day is over, and we are exhausted, and we often have very little to show for it. And we start the next . . . <a class="readmore-link" href="http://knowledgebase.inspirythemes.com/using-video/">Read more</a></p>
-
-                                                </article>
-
-                                                <article class=" type-post  format-standard hentry clearfix">
-
-                                                        <header class="clearfix">
-
-                                                                <h3 class="post-title">
-                                                                        <a href="single.html">WordPress Site Maintenance</a>
-                                                                </h3>
-
-                                                                <div class="post-meta clearfix">
-                                                                        <span class="date">24 Feb, 2013</span>
-                                                                        <span class="category"><a href="#" title="View all posts in Website Dev">Website Dev</a></span>
-
-                                                                        <span class="comments"><a href="#" title="Comment on WordPress Site Maintenance">0 Comments</a></span>
-
-                                                                        <span class="like-count">15</span>
-                                                                </div><!-- end of post meta -->
-
-                                                        </header>
-
-                                                        <p>Many of us work in an endless stream of tasks, browser tasks, social media, emails, meetings, rushing from one thing to another, never pausing and never ending.&nbsp;Then the day is over, and we are exhausted, and we often have very little to show for it. And we start the next . . . <a class="readmore-link" href="http://knowledgebase.inspirythemes.com/wordpress-site-maintenance/">Read more</a></p>
-
-                                                </article>
-
-                                                <div id="pagination">
-                                                        <a href="#" class="btn active">1</a>
-                                                        <a href="#" class="btn">2</a>
-                                                        <a href="#" class="btn">3</a>
-                                                        <a href="#" class="btn">Next »</a>
-                                                        <a href="#" class="btn">Last »</a>
-                                                </div>
-
+													// Configuration options go here
+													options: {
+														title: {
+														display: true,
+														}
+													}
+												});
+												</script>
+											</article>
+                                                
                                         </div>
                                         <!-- end of page content -->
 
@@ -244,58 +157,66 @@
                                                 <section class="widget">
                                                         <div class="support-widget">
                                                                 <h3 class="title">Support</h3>
-                                                                <p class="intro">Need more support? If you did not found an answer, contact us for further help.</p>
+                                                                <p class="intro">If you did not found your measurement, <a href="contact.html" ><u>Contact us</u></a> for further help .</p>
                                                         </div>
                                                 </section>
 
 
                                                 <section class="widget">
-                                                        <h3 class="title">Featured Articles</h3>
+                                                        <h3 class="title">Popular Measurements</h3>
                                                         <ul class="articles">
                                                                 <li class="article-entry standard">
-                                                                        <h4><a href="single.html">Integrating WordPress with Your Website</a></h4>
-                                                                        <span class="article-meta">25 Feb, 2013 in <a href="#" title="View all posts in Server &amp; Database">Server &amp; Database</a></span>
-                                                                        <span class="like-count">66</span>
+                                                                        <h4><a href="single.html">Measurement xyz</a></h4>
+                                                                        <span class="article-meta">25 items in <a href="#" title="View all measurements in Area xy &amp; Diagnosis zw">Area xy &amp; Diagnosis zw</a></span>
+                                                                </li>
+                                                                 <li class="article-entry standard">
+                                                                        <h4><a href="single.html">Measurement xyz</a></h4>
+                                                                        <span class="article-meta">25 items in <a href="#" title="View all measurements in Area xy &amp; Diagnosis zw">Area xy &amp; Diagnosis zw</a></span>
                                                                 </li>
                                                                 <li class="article-entry standard">
-                                                                        <h4><a href="single.html">WordPress Site Maintenance</a></h4>
-                                                                        <span class="article-meta">24 Feb, 2013 in <a href="#" title="View all posts in Website Dev">Website Dev</a></span>
-                                                                        <span class="like-count">15</span>
+                                                                        <h4><a href="single.html">Measurement xyz</a></h4>
+                                                                        <span class="article-meta">25 items in <a href="#" title="View all measurements in Area xy &amp; Diagnosis zw">Area xy &amp; Diagnosis zw</a></span>
                                                                 </li>
-                                                                <li class="article-entry video">
-                                                                        <h4><a href="single.html">Meta Tags in WordPress</a></h4>
-                                                                        <span class="article-meta">23 Feb, 2013 in <a href="#" title="View all posts in Website Dev">Website Dev</a></span>
-                                                                        <span class="like-count">8</span>
-                                                                </li>
-                                                                <li class="article-entry image">
-                                                                        <h4><a href="single.html">WordPress in Your Language</a></h4>
-                                                                        <span class="article-meta">22 Feb, 2013 in <a href="#" title="View all posts in Advanced Techniques">Advanced Techniques</a></span>
-                                                                        <span class="like-count">6</span>
+                                                                 <li class="article-entry standard">
+                                                                        <h4><a href="single.html">Measurement xyz</a></h4>
+                                                                        <span class="article-meta">25 items in <a href="#" title="View all measurements in Area xy &amp; Diagnosis zw">Area xy &amp; Diagnosis zw</a></span>
                                                                 </li>
                                                         </ul>
                                                 </section>
 
 
 
-                                                <section class="widget"><h3 class="title">Categories</h3>
+                                                <section class="widget"><h3 class="title">Area of assessments</h3>
                                                         <ul>
-                                                                <li><a href="#" title="Lorem ipsum dolor sit amet,">Advanced Techniques</a> </li>
-                                                                <li><a href="#" title="Lorem ipsum dolor sit amet,">Designing in WordPress</a></li>
-                                                                <li><a href="#" title="Lorem ipsum dolor sit amet,">Server &amp; Database</a></li>
-                                                                <li><a href="#" title="Lorem ipsum dolor sit amet, ">Theme Development</a></li>
-                                                                <li><a href="#" title="Lorem ipsum dolor sit amet,">Website Dev</a></li>
-                                                                <li><a href="#" title="Lorem ipsum dolor sit amet,">WordPress for Beginners</a></li>
-                                                                <li><a href="#" title="Lorem ipsum dolor sit amet, ">WordPress Plugins</a></li>
+                                                                <li><a href="#" title="Lorem ipsum dolor sit amet,">Area x</a> </li>
+                                                                <li><a href="#" title="Lorem ipsum dolor sit amet,">Area y</a></li>
+                                                                <li><a href="#" title="Lorem ipsum dolor sit amet,">Area w</a></li>
+                                                                <li><a href="#" title="Lorem ipsum dolor sit amet, ">Area z</a></li>
+                                                                <li><a href="#" title="Lorem ipsum dolor sit amet,">Area n</a></li>
+                                                                <li><a href="#" title="Lorem ipsum dolor sit amet,">Area b</a></li>
+                                                                <li><a href="#" title="Lorem ipsum dolor sit amet, ">Area u</a></li>
                                                         </ul>
                                                 </section>
 
                                                 <section class="widget">
-                                                        <h3 class="title">Recent Comments</h3>
-                                                        <ul id="recentcomments">
-                                                                <li class="recentcomments"><a href="#" rel="external nofollow" class="url">John Doe</a> on <a href="#">Integrating WordPress with Your Website</a></li>
-                                                                <li class="recentcomments">saqib sarwar on <a href="#">Integrating WordPress with Your Website</a></li>
-                                                                <li class="recentcomments"><a href="#" rel="external nofollow" class="url">John Doe</a> on <a href="#">Integrating WordPress with Your Website</a></li>
-                                                                <li class="recentcomments"><a href="#" rel="external nofollow" class="url">Mr WordPress</a> on <a href="#">Installing WordPress</a></li>
+                                                        <h3 class="title">Recent Measurements</h3>
+                                                        <ul class="articles">
+                                                                <li class="article-entry standard">
+                                                                        <h4><a href="single.html">Measurement xyz</a></h4>
+                                                                        <span class="article-meta">25 items in <a href="#" title="View all measurements in Area xy &amp; Diagnosis zw">Area xy &amp; Diagnosis zw</a></span>
+                                                                </li>
+                                                                 <li class="article-entry standard">
+                                                                        <h4><a href="single.html">Measurement xyz</a></h4>
+                                                                        <span class="article-meta">25 items in <a href="#" title="View all measurements in Area xy &amp; Diagnosis zw">Area xy &amp; Diagnosis zw</a></span>
+                                                                </li>
+                                                                <li class="article-entry standard">
+                                                                        <h4><a href="single.html">Measurement xyz</a></h4>
+                                                                        <span class="article-meta">25 items in <a href="#" title="View all measurements in Area xy &amp; Diagnosis zw">Area xy &amp; Diagnosis zw</a></span>
+                                                                </li>
+                                                                 <li class="article-entry standard">
+                                                                        <h4><a href="single.html">Measurement xyz</a></h4>
+                                                                        <span class="article-meta">25 items in <a href="#" title="View all measurements in Area xy &amp; Diagnosis zw">Area xy &amp; Diagnosis zw</a></span>
+                                                                </li>
                                                         </ul>
                                                 </section>
 
@@ -313,24 +234,23 @@
 
                                         <div class="span3">
                                                 <section class="widget">
-                                                        <h3 class="title">How it works</h3>
+                                                        <h3 class="title">Lorem ipsum Lorem ipsum</h3>
                                                         <div class="textwidget">
-                                                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
-                                                                <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. </p>
+                                                                <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum. </p>
+                                                                <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum . </p>
                                                         </div>
                                                 </section>
                                         </div>
 
                                         <div class="span3">
                                                 <section class="widget"><h3 class="title">Categories</h3>
-                                                        <ul>
-                                                                <li><a href="#" title="Lorem ipsum dolor sit amet,">Advanced Techniques</a> </li>
-                                                                <li><a href="#" title="Lorem ipsum dolor sit amet,">Designing in WordPress</a></li>
-                                                                <li><a href="#" title="Lorem ipsum dolor sit amet,">Server &amp; Database</a></li>
-                                                                <li><a href="#" title="Lorem ipsum dolor sit amet, ">Theme Development</a></li>
-                                                                <li><a href="#" title="Lorem ipsum dolor sit amet,">Website Dev</a></li>
-                                                                <li><a href="#" title="Lorem ipsum dolor sit amet,">WordPress for Beginners</a></li>
-                                                                <li><a href="#" title="Lorem ipsum dolor sit amet, ">WordPress Plugins</a></li>
+														<ul>
+                                                                <li><a href="index.html" title="Lorem ipsum dolor sit amet,">Home</a> </li>
+                                                                <li><a href="articles-list.html" title="Lorem ipsum dolor sit amet,">Measurements List</a></li>
+                                                                <li><a href="#" title="Lorem ipsum dolor sit amet,">About us</a></li>
+                                                                <li><a href="faq.html" title="Lorem ipsum dolor sit amet, ">FAQ</a></li>
+                                                                <li><a href="contact.html" title="Lorem ipsum dolor sit amet,">Contact us</a></li>
+                                                                <li><a href="#" title="Lorem ipsum dolor sit amet,">HSRC</a></li>
                                                         </ul>
                                                 </section>
                                         </div>
@@ -359,8 +279,6 @@
 
                                         <div class="span3">
                                                 <section class="widget">
-                                                        <h3 class="title">Flickr Photos</h3>
-                                                        <div class="flickr-photos" id="basicuse">
                                                         </div>
                                                 </section>
                                         </div>
@@ -375,19 +293,12 @@
                                         <div class="row">
                                                 <div class="span6">
                                                         <p class="copyright">
-                                                                Copyright © 2013. All Rights Reserved by KnowledgeBase.
+                                                                Copyright © 2018. All Rights Reserved by AHM.
                                                         </p>
                                                 </div>
                                                 <div class="span6">
                                                         <!-- Social Navigation -->
                                                         <ul class="social-nav clearfix">
-                                                                <li class="linkedin"><a target="_blank" href="#"></a></li>
-                                                                <li class="stumble"><a target="_blank" href="#"></a></li>
-                                                                <li class="google"><a target="_blank" href="#"></a></li>
-                                                                <li class="deviantart"><a target="_blank" href="#"></a></li>
-                                                                <li class="flickr"><a target="_blank" href="#"></a></li>
-                                                                <li class="skype"><a target="_blank" href="skype:#?call"></a></li>
-                                                                <li class="rss"><a target="_blank" href="#"></a></li>
                                                                 <li class="twitter"><a target="_blank" href="#"></a></li>
                                                                 <li class="facebook"><a target="_blank" href="#"></a></li>
                                                         </ul>
